@@ -53,11 +53,26 @@ INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes) VA
 (4, 10, '2024-05-30 13:15:00', 'Coral Coastline Rock Pool', 'Seahorse blending with coral'),
 (5, 8, '2024-04-12 10:25:00', 'Sundarbans Beetle Hollow', 'Unusual shell coloration noted');
 
+INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes)
+VALUES (2, 1, '2025-06-08 14:30:00', 'Rocky Mountain Pass', 'Observed near the ridge');
+
 SELECT * from rangers
 
 SELECT * FROM species
 
 SELECT * FROM sightings
+
+-- Problem 1 
+INSERT INTO rangers (name, region) VALUES('Derek Fox', 'Coastal Plains')
+
+-- Problem 2
+SELECT COUNT(DISTINCT species_id) AS unique_species_count FROM sightings;
+
+-- Problem 3
+SELECT * FROM sightings WHERE location ILIKE '%Pass%'
+
+-- Problem 4
+SELECT 
 
 
 
